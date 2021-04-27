@@ -1,0 +1,251 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+
+}
+
+/* IMAGE SLIDER */
+
+.header{
+    
+    background-size: cover;
+    background-position: top;
+}
+
+.slider{
+    overflow: hidden;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+   
+    animation: 30s slider cubic-bezier(.21,.16,.35,1.26) infinite;
+}
+
+
+.slider figure img{
+    float: left;
+    width: 20%;
+    filter: brightness(40%); 
+    top: 0;
+    object-fit: cover;
+}
+
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+
+    10%{
+        left: 0;
+    }
+
+    20%{
+        left: -100%;
+    }
+
+    30%{
+        left: -100%;
+    }
+
+    40%{
+        left: -200%;
+    }
+    50%{
+        left: -200%;
+    }
+
+    60%{
+        left: -300%;
+    }
+
+    70%{
+        left: -300%;
+    }
+
+    80%{
+        left: -400%;
+    }
+    90%{
+        left: -400%;
+    }
+
+    100%{
+        left: 0%;
+    }
+
+}
+
+.slider-image{
+    width: 100%;
+    object-fit: cover;
+    height: 802px;
+}
+
+.icon-1{
+    color: #FEF9FF; 
+    font-family: 'Great Vibes', cursive;
+    position: absolute;
+    top: 20px;
+    font-size: 60px;
+   left: 20px;
+    z-index: 50;
+    animation: moveInLeft 1s ease-out;
+}
+
+.icon{
+    position: relative;
+
+}
+
+.icon-2{
+    color: #FEF9FF; 
+   font-family: 'Great Vibes', cursive;
+   position: absolute;
+    top: 100px;
+   font-size: 60px;
+   left: 60px;
+    z-index: 50;
+    animation: moveInRight 1s ease-out;
+}
+
+.icon-0{
+    color: #FEF9FF; 
+    font-family: 'Merienda', cursive;
+    position: absolute;
+     top: 15px;
+      width: 80px;
+    left: 700px;
+     z-index: 50;
+}
+
+  .navbar{
+      position: absolute;
+      top: 50px;
+      z-index: 20;
+      right: 20px;
+  }
+
+  .nav-list{
+      right: 100px;
+  }
+
+  .nav-item{
+    display: inline-block;
+    padding: 0.5rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    /* animation: text 3s ease-out; */
+    
+  }
+
+  .nav-link{
+      text-decoration: none;
+      padding: 1rem;
+     color: #FEF9FF;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     font-size: 20px;
+     position: relative;
+  }
+
+  /* .nav-item:hover{
+     
+      /* background-color: blue; */
+      /* transform: scale(0.9);
+      transition: all 2s;
+  } */ 
+
+  @keyframes moveInRight {
+	0%{
+	   opacity: 0;
+	   transform: translateX(400px);
+	}
+	80%{
+		transform: translateX(-10px);
+	}
+	100%{
+	   opacity: 1;
+	   transform: translate(0);
+	}
+  
+  }
+
+  @keyframes moveInLeft {
+    0%{
+       opacity: 0;
+       transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+       opacity: 1;
+       transform: translate(0);
+    }
+  
+  }
+  /* .hvr-bounce-in {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+  } */
+  /* .hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  }
+   */
+
+   .nav-item a:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    transform: scaleY(2);
+    opacity: 0;
+    transition: .5s;
+   }
+
+   .nav-item a:hover:before{
+       transform: scaleY(1);
+       opacity: 1;
+   }
+
+   .nav-item a:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 2px;
+    transform: scale(0);
+    transition: .5s;
+    background: transparent;
+   }
+
+   .nav-item a:hover:after{
+       transform: scale(1);
+   }
+
+   
